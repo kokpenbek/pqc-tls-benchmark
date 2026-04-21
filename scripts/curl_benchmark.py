@@ -156,25 +156,25 @@ CSV_FIELDS: list[str] = [
 
 
 def load_config(path: str) -> dict:
-    """Loads JSON file defined by a user to import configurations for further benchmarking."""
+    """Loads JSON file defined by a user to import configurations for further benchmarking."""  # noqa: E501
     with open(path, encoding="utf-8") as fh:
         import_raw = json.load(fh)
 
-    allowed_attributes = {"server", "iterations", "warmup", "endpoints", "variants"}
+    allowed_attributes = {"server", "iterations", "warmup", "endpoints", "variants"}  # noqa: E501
     denied_attributes = set(import_raw) - allowed_attributes
     if denied_attributes:
-        raise ValueError(f"Following JSON attributes are not defined: {denied_attributes}")
+        raise ValueError(f"Following JSON attributes are not defined: {denied_attributes}")  # noqa: E501
 
     if "variants" in import_raw:
         for name, v in import_raw["variants"].items():
             if "port" not in v or "curves" not in v:
                 raise ValueError(
-                    f"Variant '{name}' must have 'port' and 'curves' keys, not found"
+                    f"Variant '{name}' must have 'port' and 'curves' keys, not found"  # noqa: E501
                 )
     if "endpoints" in import_raw:
         for endpoints in import_raw["endpoints"]:
             if not endpoints.startswith("/"):
-                raise ValueError(f"Endpoint error, must start with '/': {endpoints!r}")
+                raise ValueError(f"Endpoint error, must start with '/': {endpoints!r}")  # noqa: E501
 
     return import_raw
 
@@ -396,7 +396,7 @@ def parse_args() -> argparse.Namespace:
     """Parse command-line arguments."""
     parser = argparse.ArgumentParser(
         description=(
-            "Hybrid PQC benchmark — compares classical vs hybrid handshake latency"
+            "Hybrid PQC benchmark — compares classical vs hybrid handshake latency"  # noqa: E501
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
