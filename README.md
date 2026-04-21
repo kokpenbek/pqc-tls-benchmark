@@ -9,17 +9,18 @@ This repository contains the experimental code, raw measurement data, and analys
 For readers who just want to reproduce the results end-to-end on a clean machine:
 
 1. Clone the repo
-2. Build OpenSSL 3.5 and NGINX from source (bare metal)
-    - `setup/openssl_install.sh`
-    - `setup/nginx_install.sh`
-3. Generate endpoints (each different size for amortization)
-    - `setup/generate_endpoints.sh`
-4. Install Python dependencies for the benchmark and notebook
-    - `pip install -r benchmark/requirements.txt`
-5. Use configuration settings for NGINX (classic and hybrid)
+2. Build OpenSSL 3.5 and NGINX from source (bare metal):
+    - `bash setup/openssl_install.sh`
+    - `bash setup/nginx_install.sh`
+3. Generate endpoints (each different size for amortization):
+    - `bash setup/generate_endpoints.sh`
+4. Install Python dependencies for the benchmark and notebook:
+    - `pip install -r requirements.txt`
+5. Use configuration settings for NGINX (classic and hybrid):
     - `server/classic.conf`
     - `server/hybrid.conf`
-6. Run the measurement client in another terminal
-    - `python3 benchmark/curl_benchmark.py --help`
-7. Open the analysis notebook to regenerate figures
-    - `jupyter notebook benchmark/analysis.ipynb`
+6. Run the measurement client:
+    - `python scripts/curl_benchmark.py --help`
+    - `python scripts/stime_benchmark.py --help`
+7. Open the analysis notebook to generate figures:
+    - `jupyter notebook analysis.ipynb`

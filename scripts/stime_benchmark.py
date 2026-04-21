@@ -10,7 +10,7 @@ CSV columns:
   conn_per_sec   — throughput (connections / duration)
 
 Example:
-    python3 stime_benchmark.py --server 203.0.113.1 --runs 5
+    python stime_benchmark.py --server 203.0.113.1 --runs 5
 """
 
 import argparse

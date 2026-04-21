@@ -46,18 +46,14 @@ STATISTICAL OUTPUT (printed after each variant/endpoint run)
 EXAMPLES
 ------------------------------------------------------------------------
   # Minimal — use built-in defaults (ports 8443/8444, 4 endpoints):
-  python3 curl_benchmark.py --server 203.0.113.1
+  python curl_benchmark.py --server 203.0.113.1
 
   # Custom endpoints:
-  python3 curl_benchmark.py --server 203.0.113.1 \\
+  python curl_benchmark.py --server 203.0.113.1 \\
       --endpoints /health /api/v1/users /download/report.pdf
 
-  # Fewer iterations for a quick smoke test:
-  python3 curl_benchmark.py --server 203.0.113.1 \\
-      --iterations 20 --warmup 3 --endpoints /health
-
   # Full config from a JSON file (recommended for reproducibility):
-  python3 curl_benchmark.py --config my_config.json
+  python curl_benchmark.py --config my_config.json
 
 ------------------------------------------------------------------------
 CONFIG FILE FORMAT  (all fields optional; defaults shown)
@@ -92,7 +88,7 @@ CONFIG FILE FORMAT  (all fields optional; defaults shown)
 OUTPUT
 ------------------------------------------------------------------------
   Results are written to:
-    results/raw/benchmark_<UTC-timestamp>.csv
+    results/curl_benchmark/benchmark_<UTC-timestamp>.csv
 
   CSV columns: variant, endpoint, iteration,
                tls_handshake_ms, ttfb_ms, total_ms, size_bytes
