@@ -124,8 +124,9 @@ import statistics
 DEFAULT_SERVER_IP: str = os.environ.get("SERVER_IP", "localhost")
 DEFAULT_ITERATIONS: int = 200
 DEFAULT_WARMUP: int = 10
+PROJECT_ROOT: Path = Path(__file__).resolve().parent.parent
 RESULTS_DIR: Path = Path(
-    os.environ.get("RESULTS_DIR", Path(__file__).parent / "results" / "raw")
+    os.environ.get("RESULTS_DIR", str(PROJECT_ROOT / "results" / "curl_benchmark"))
 )
 
 DEFAULT_ENDPOINTS: list[str] = [
