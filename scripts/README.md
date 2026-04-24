@@ -9,6 +9,7 @@ for further analysis in `analysis.ipynb`.
 |--------|---------|--------|
 | `curl_benchmark.py` | Per-request TLS handshake and total latency | `results/curl_benchmark/benchmark_<ts>.csv` |
 | `stime_benchmark.py` | Sustained TLS handshake throughput | `results/stime/stime_<ts>.csv` |
+| `parse_pcap.py` | Parses pcap file with captured TLS traffic for layered decomposition | `results/layered_analysis/{variant}_layered.csv` |
 
 See the module docstring at the top of each script for full usage,
 CLI flags, metric definitions, and configuration options.
@@ -18,6 +19,7 @@ CLI flags, metric definitions, and configuration options.
 - Python 3.10+
 - `curl` built against OpenSSL 3.5+ (for `curl_benchmark.py`)
 - `openssl` 3.5+
+- Exported SSLKEYLOGFILE for decrypting HTTPS traffic
 - Server configured with two TLS endpoints:
   - Port 8443 — classical X25519
   - Port 8444 — hybrid X25519MLKEM768
