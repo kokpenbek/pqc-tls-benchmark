@@ -22,5 +22,7 @@ For readers who just want to reproduce the results end-to-end on a clean machine
 6. Run the measurement client:
     - `python scripts/curl_benchmark.py --help`
     - `python scripts/stime_benchmark.py --help`
-7. Open the analysis notebook to generate figures:
+7. In case of layered decomposition use following python script:
+    - `python scripts/parse_prcap.py --help`
+8. Open the analysis notebook to generate figures:
     - `jupyter notebook analysis.ipynb`
