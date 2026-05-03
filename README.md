@@ -26,3 +26,15 @@ For readers who just want to reproduce the results end-to-end on a clean machine
     - `python scripts/parse_prcap.py --help`
 8. Open the analysis notebook to generate figures:
     - `jupyter notebook analysis.ipynb`
+  
+
+## Academic context
+
+This repository contains the implementation, benchmarking scripts, configuration files, raw measurement data, and analysis notebooks created as part of the bachelor's thesis:
+
+**Practical Migration to Post-Quantum Cryptography: Implementing and Benchmarking Hybrid Cryptographic Schemes**
+
+<img src="https://fit.cvut.cz/static/images/fit-cvut-logo-en.svg" alt="FIT CTU logo" height="200">
+
+This software was developed with the support of the **Faculty of Information Technology, Czech Technical University in Prague**.
+For more information, visit [fit.cvut.cz](https://fit.cvut.cz).
