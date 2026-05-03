@@ -26,7 +26,12 @@ For readers who just want to reproduce the results end-to-end on a clean machine
     - `python scripts/parse_prcap.py --help`
 8. Open the analysis notebook to generate figures:
     - `jupyter notebook analysis.ipynb`
+
   
+## License
+
+This repository is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for the full license text.
+
 
 ## Academic context
 
