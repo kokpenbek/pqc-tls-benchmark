@@ -1,6 +1,6 @@
 # pqc-tls-benchmark
 
-Practical migration to post-quantum cryptography: benchmarking hybrid TLS 1.3 on NGINX with OpenSSL 3.5.
+Practical Migration to Post-Quantum Cryptography: Implementing and Benchmarking Hybrid Cryptographic Schemes.
 
 This repository contains the experimental code, raw measurement data, and analysis notebooks for the bachelor's thesis. It compares classical TLS (`X25519`) against hybrid post-quantum key exchange (`X25519MLKEM768`) in a real client–server setup, measuring handshake time, time-to-first-byte (TTFB), and on-the-wire packet sizes under different network conditions.
 
