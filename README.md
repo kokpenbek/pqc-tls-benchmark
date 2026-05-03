@@ -23,7 +23,7 @@ For readers who just want to reproduce the results end-to-end on a clean machine
     - `python scripts/curl_benchmark.py --help`
     - `python scripts/stime_benchmark.py --help`
 7. In case of layered decomposition use following python script:
-    - `python scripts/parse_prcap.py --help`
+    - `python scripts/parse_pcap.py --help`
 8. Open the analysis notebook to generate figures:
     - `jupyter notebook analysis.ipynb`
 
