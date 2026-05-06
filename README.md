@@ -14,16 +14,14 @@ For readers who just want to reproduce the results end-to-end on a clean machine
     - `bash setup/nginx_install.sh`
 3. Generate endpoints (each different size for amortization):
     - `bash setup/generate_endpoints.sh`
-4. Install Python dependencies for the benchmark and notebook:
-    - `pip install -r requirements.txt`
-5. Use configuration settings for NGINX (classic and hybrid):
+4. Use configuration settings for NGINX (classic and hybrid):
     - `server/classic.conf`
     - `server/hybrid.conf`
-6. Run the measurement client:
+5. Run the measurement client:
     - `python scripts/curl_benchmark.py --help`
     - `python scripts/stime_benchmark.py --help`
 7. In case of layered decomposition use following python script:
-    - `python scripts/parse_pcap.py --help`
+    - `python scripts/parse_prcap.py --help`
 8. Open the analysis notebook to generate figures:
     - `jupyter notebook analysis.ipynb`
 
