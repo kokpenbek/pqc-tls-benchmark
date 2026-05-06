@@ -32,8 +32,9 @@ This repository is licensed under the Apache License 2.0. See the [LICENSE](LICE
 
 This repository contains the implementation, benchmarking scripts, configuration files, raw measurement data, and analysis notebooks created as part of the bachelor's thesis:
 
-**Practical Migration to Post-Quantum Cryptography: Implementing and Benchmarking Hybrid Cryptographic Schemes**
+## Practical Migration to Post-Quantum Cryptography: Implementing and Benchmarking Hybrid Cryptographic Schemes
 
+<!-- markdownlint-disable-next-line MD033 -->
 <img src="https://fit.cvut.cz/static/images/fit-cvut-logo-en.svg" alt="FIT CTU logo" height="200">
 
 This software was developed with the support of the **Faculty of Information Technology, Czech Technical University in Prague**.
