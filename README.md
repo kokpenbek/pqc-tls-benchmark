@@ -8,28 +8,25 @@ This repository contains the experimental code, raw measurement data, and analys
 
 For readers who just want to reproduce the results end-to-end on a clean machine:
 
-1. Clone the repo
-2. Build OpenSSL 3.5 and NGINX from source (bare metal):
-    - `bash setup/openssl_install.sh`
-    - `bash setup/nginx_install.sh`
-3. Generate endpoints (each different size for amortization):
+1. Check compatibility (NGINX against OpenSSL 3.5)
+2. Generate endpoints (each different size for amortization):
     - `bash setup/generate_endpoints.sh`
-4. Use configuration settings for NGINX (classic and hybrid):
+3. Use configuration settings for NGINX (classic and hybrid):
     - `server/classic.conf`
     - `server/hybrid.conf`
+4. Install required dependencies:
+    - `pip install -r requirements.txt`  
 5. Run the measurement client:
     - `python scripts/curl_benchmark.py --help`
     - `python scripts/stime_benchmark.py --help`
-7. In case of layered decomposition use following python script:
+6. In case of layered decomposition use following python script:
     - `python scripts/parse_prcap.py --help`
-8. Open the analysis notebook to generate figures:
+7. Open the analysis notebook to generate figures:
     - `jupyter notebook analysis.ipynb`
 
-  
 ## License
 
 This repository is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for the full license text.
-
 
 ## Academic context
 
